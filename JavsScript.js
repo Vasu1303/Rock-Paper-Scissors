@@ -45,8 +45,12 @@ let score = JSON.parse(localStorage.getItem('score'))
             result = 'You win';
           }
         }
+        document.querySelector('.computer-move').innerHTML = `Computer chosed: ${computerMove} |  
+            
+            You chosed: ${playerMove}`;
         if(result === 'You win'){
             score.wins +=1;
+            
             document.querySelector('.result').innerHTML = `You Won!`;
         }
         else if(result === 'You lose'){
